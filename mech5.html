@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>
+            Mech Material
+        </title>
+        <link rel="icon" type="image/png" href="logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato&display=swap" rel="stylesheet">
+        <style>
+    body {
+      background-color: black;
+      font-family: 'Lato', sans-serif;
+      color: white;
+      
+    }
+    .header{
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        align-items: center;
+        padding: 0px 40px;
+        
+    }
+    .rheader{
+       
+        margin:0px 20px; 
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      align-items:flex-start;
+    }
+
+    .dropdown {
+        flex: 0 0 auto;
+        max-width: 300px;
+        width: 300px;
+        /*height: 300px;*/
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px grey;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: orange;
+        color: black;
+        position: relative;
+        margin: 20px;
+    }
+
+    .dropdown-header {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      background: orange;
+      color: black;
+      text-align: center;
+      border-radius: 10px 10px 10px 10px;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      background: #cc8400;
+      transition: max-height 0.4s ease;
+      color: black;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+      top: 0;
+      left:0;right:0;
+      padding: 0 20px;
+    }
+
+    .dropdown-content p {
+      margin: 15px 0;
+      color: black;
+    }
+    .dropdown:hover {
+  box-shadow: 0px 0px 20px white; /* shadow only on hover */
+}
+
+    .dropdown.open .dropdown-content {
+      max-height: 300px; /* enough height to show your content */
+      padding: 20px;
+    }
+  </style>
+        
+    </head>
+    <body>
+        <div>
+           <div class="header" style="
+        box-shadow: 0 0 20px orange;
+        padding-top:5px;
+        margin:-10px;
+        margin-bottom:40px;
+        display:flex;
+        justify-content:space-between;">
+        <div>
+            <a href="index.html"style="padding: 25px 0px; color:orange;text-decoration: none;" onmouseover=" this.style.color='white';" onmouseout="this.style.textDecoration='none'; this.style.color='orange';"><h3>IITKGP material</h3></a>
+        </div>
+
+        <div
+        style=" display:flex;
+        justify-content:space-between;
+        ">
+            <div class="rheader"><a href="dne.html"  style="padding: 25px 0; color:orange;text-decoration: none;" onmouseover=" this.style.color='white';" onmouseout="this.style.textDecoration='none'; this.style.color='orange';">About</a></div>
+            <div class="rheader"><a href="dne.html"  style="padding: 25px 0; color:orange;text-decoration: none;" onmouseover=" this.style.color='white';" onmouseout="this.style.textDecoration='none'; this.style.color='orange';">Help</a></div>
+            
+
+        </div>
+            
+        </div>
+
+            
+        </div>
+      <div class="container">
+            <div class="dropdown" id="dropdown1">
+                    <div class="dropdown-header"><h3>Kinematics and Kinetics of Machines</h3></div>
+                    <div class="dropdown-content">
+                        <p>This is the hidden content that slides down when you click the box.</p>
+                        <p>You can add more text, images, or even buttons here.</p>
+                     </div>
+              </div>
+            <div class="dropdown" id="dropdown2">
+                    <div class="dropdown-header"><h3>Design of Machine Elements</h3></div>
+                    <div class="dropdown-content">
+                        <p>This is the hidden content that slides down when you click the box.</p>
+                        <p>You can add more text, images, or even buttons here.</p>
+                     </div>
+              </div>
+              <div class="dropdown" id="dropdown2">
+                    <div class="dropdown-header"><h3>Casting,Forming and Welding</h3></div>
+                    <div class="dropdown-content">
+                        <p>This is the hidden content that slides down when you click the box.</p>
+                        <p>You can add more text, images, or even buttons here.</p>
+                     </div>
+              </div>
+
+      </div>
+       <div class="container">
+                    <div class="dropdown" id="dropdown2">
+                    <div class="dropdown-header"><h3>Heat Transfer</h3></div>
+                    <div class="dropdown-content">
+                        <p>This is the hidden content that slides down when you click the box.</p>
+                        <p>You can add more text, images, or even buttons here.</p>
+                     </div>
+              </div>
+              <div class="dropdown" id="dropdown2">
+                    <div class="dropdown-header"><h3>Material Science</h3></div>
+                    <div class="dropdown-content">
+                        <p>This is the hidden content that slides down when you click the box.</p>
+                        <p>You can add more text, images, or even buttons here.</p>
+                     </div>
+              </div>
+        </div>
+  <script>
+    const dropdowns = document.querySelectorAll(".dropdown");
+    dropdowns.forEach(dropdown => {
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("open");
+      });
+    });
+  </script>
+        
+    </body>
+</html>

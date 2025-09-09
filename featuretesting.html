@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expandable Box</title>
+  <style>
+    body {
+      background-color: black;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .dropdown {
+      width: 400px;
+      border: 2px solid white;
+      border-radius: 8px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-header {
+      padding: 20px;
+      font-size: 20px;
+      background: #222;
+    }
+
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      background: #333;
+      transition: max-height 0.4s ease;
+      padding: 0 20px;
+    }
+
+    .dropdown-content p {
+      margin: 15px 0;
+      color: #ddd;
+    }
+
+    .dropdown.open .dropdown-content {
+      max-height: 200px; /* enough height to show your content */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown" id="myDropdown">
+    <div class="dropdown-header">Click me to reveal more info ⬇</div>
+    <div class="dropdown-content">
+      <p>This is the hidden content that slides down when you click the box.</p>
+      <p>You can add more text, images, or even buttons here.</p>
+    </div>
+  </div>
+
+  <script>
+    const dropdown = document.getElementById("myDropdown");
+    dropdown.addEventListener("click", () => {
+      dropdown.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
